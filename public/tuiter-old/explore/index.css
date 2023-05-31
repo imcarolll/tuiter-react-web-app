@@ -1,0 +1,153 @@
+.wd-search-bar{
+   width: 75%;
+   float:left;
+   margin: 10px;
+   margin-left: 30px;
+   background-color: lightgray;
+   border-width: 0px;
+   padding:15px;
+   border-radius: 50px;
+}
+
+.wd-icon{
+   z-index: 10;
+   position:absolute;
+   top:6.5px;
+   color:darkgray;
+}
+
+.wd-input-field{
+   width:80%;
+   padding:0px;
+   background-color: lightgray;
+   border-color: transparent;
+   margin: 0px;
+   padding-left: 10px;
+   position:absolute;
+   left:30px;
+   top:6.5px
+
+}
+
+.wd-setting-icon{
+   margin-left: 10px;
+   width: 5%;
+   float:left;
+}
+
+.wd-border-none {
+   border-width: 0px; }
+
+   .wd-pos-absolute-10 {
+      position: absolute;
+      left: 10px;
+   }
+
+   .wd-pos-absolute-30 {
+      position: absolute;
+      left: 30px;
+   }
+
+   .wd-pos-absolute-200 {
+      position: absolute;
+      left: 200px;
+   }
+
+   .wd-pos-relative {
+      position: relative;
+   }
+
+   .wd-padding-fat {
+      padding: 50px;
+    }
+
+    .border-thin {
+      border-width: 4px; }
+   .border-solid {
+      border-style: solid; }
+
+      .border-blue {
+         border-color: #7070ff; }
+
+         .wd-float-left {
+            float: left;
+         }
+         
+         .wd-float-right {
+            float: right;
+         }
+         
+         .wd-float-done {
+            clear: both;
+         }
+
+         .grid-row {
+            clear: both;
+         }
+         
+         .grid-col-half-page {
+            width: 50%;
+            float: left;
+         }
+
+         .grid-col-third-page {
+            width: 33%;
+            float: left;
+         }
+         
+         .grid-col-two-thirds-page {
+            width: 67%;
+            float: left;
+         }
+
+         .grid-col-ninty-per-page {
+            width: 90%;
+            float: left;
+         }
+
+         .grid-col-ten-per-page {
+            width: 10%;
+            float: left;
+         }
+
+         .grid-col-twenty-per-page {
+            width: 20%;
+            float: left;
+         }
+
+         .grid-col-sixty-per-page {
+            width: 60%;
+            float: left;
+         }
+
+         .grid-col-eighty-per-page {
+            width: 80%;
+            float: left;
+         }
+         
+         .grid-col-left-sidebar {
+            width: 20%;
+            float: left;
+         }
+         
+         .grid-col-main-content {
+            width: 60%;
+            float: left;
+         }
+         
+         .grid-col-right-sidebar {
+            width: 20%;
+            float: right;
+         }
+
+
+         
+         
+         
+      
+    
+   
+   
+
+
+   
