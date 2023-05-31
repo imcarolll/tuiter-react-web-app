@@ -3,9 +3,10 @@ import VariablesTypes from "./variable-types";
 import BooleanVariables from "./boolean-variables";
 import IfElse from "./if-else";
 import TernaryOperator from "./ternary-operator";
-import WorkingWithFunctions from "./WorkingWithFunctions"
+import WorkingWithFunctions from "./WorkingWithFunctions";
 import WorkingWithArrays from "./working-with-arrays";
-import House from "./House.js"
+import House from "./House.js";
+import Spread from "./spread.js";
 import Destructing from "./destructing";
 import FunctionDestructing from "./function-destructing"
 
@@ -22,6 +23,7 @@ function JavaScript() {
           <WorkingWithFunctions/>
           <WorkingWithArrays/>
           <House/>
+          <Spread />
           <Destructing />
           <FunctionDestructing />
           

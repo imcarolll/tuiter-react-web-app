@@ -13,14 +13,14 @@ function ExploreScreen() {
                             className="form-control rounded-pill ps-5"/>
                     <AiOutlineSearch className="fs-3 position-absolute 
                                 wd-nudge-up"/>
-            </div>
-            <div className="col-1">
+                </div>
+                <div className="col-1">
                     <GoGear className="wd-top-4 float-end
                                 fs-3 position-relative"/>
                 </div>
             </div>
             <ul className="nav nav-pills mb-2 mt-2">
-                <li className="nav-item ">
+                <li className="nav-item">
                     <a className="nav-link active">For You</a>
                 </li>
                 <li className="nav-item">
@@ -33,7 +33,7 @@ function ExploreScreen() {
                     <a className="nav-link">Sports</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">Entertainment</a>
+                    <a className="nav-link d-none d-sm-none d-md-block">Entertainment</a>
                 </li>
             </ul>
             <div className="position-relative mb-2">

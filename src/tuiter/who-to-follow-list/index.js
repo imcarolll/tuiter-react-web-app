@@ -4,7 +4,7 @@ import WhoToFollowListItem from "./who-to-follow-list-item";
 
 const WhoToFollowList = () => {
  return(
-   <ul className="list-group d-none d-xl-inline d-xxl-inline">
+   <ul className="list-group d-none d-lg-block fa-2x">
      <li className="list-group-item">
        <h3>Who to follow</h3>
      </li>
