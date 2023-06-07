@@ -11,10 +11,17 @@ import MessageScreen from "./messages-screen";
 import ListScreen from "./list-screen";
 import MoreScreen from "./more-screen";
 import WhoToFollowList from "./who-to-follow-list";
+import whoReducer from "./reducers/who-reducer";
+import tuitsReducer from "./reducers/tuits-reducer";
+import { configureStore } from '@reduxjs/toolkit';
+import {Provider} from "react-redux";
+const store = configureStore(
+  {reducer: {who: whoReducer, tuits: tuitsReducer}});
 
 
 function Tuiter() {
     return(
+      <Provider store={store}>
        <div>
          <Nav />
          <div className="row">
@@ -34,10 +41,11 @@ function Tuiter() {
             </Routes>
          </div>
          <div className="col-3">
-         <WhoToFollowList />
+            <WhoToFollowList />
          </div>
          </div>
        </div>
+      </Provider>
     );
  }
  export default Tuiter
