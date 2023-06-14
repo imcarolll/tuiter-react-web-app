@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import { FaRegHeart, FaHeart, FaRegComments, FaRetweet,  } from "react-icons/fa";
-import { AiOutlineUpload } from "react-icons/ai";
+import { AiOutlineUpload, AiFillDislike } from "react-icons/ai";
+import { updateTuitThunk } from "../services/tuits-thunks";
+import { useDispatch } from "react-redux";
+
 
 const TuitStat = (
  {
@@ -21,7 +24,7 @@ const TuitStat = (
  }
 ) => {
   const [liked, setLiked] = useState(tuit.liked);
-
+  const dispatch = useDispatch();
   const toggleLike = () => {
     setLiked(!liked);
   };
@@ -35,13 +38,31 @@ const TuitStat = (
           {<FaRetweet/>} {tuit.retuits}
         </div>
         <div className="col">
-        <i onClick={toggleLike}>
+        <FaHeart
+            className="text-danger"
+            onClick={() =>
+              dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1 }))
+            }
+          />
+          <span className="ms-2">{tuit.likes}</span>
+        </div>  
+        <div className="col">
+        <AiFillDislike
+            className="text-danger"
+            onClick={() =>
+              dispatch(updateTuitThunk({ ...tuit, dislikes: tuit.dislikes + 1 }))
+            }
+          />
+          <span className="ms-2">{tuit.dislikes}</span>
+        </div> 
+        {/* <i onClick={toggleLike}>
         {liked ? (<div>
           <FaHeart style={{color:"red"}}/>{tuit.likes + 1}</div>) : 
         (<div>
           <FaRegHeart />{tuit.likes}</div>)} 
         </i>
-        </div>
+        */}
+        
         <div className="col">
           {<AiOutlineUpload/>}
         </div>

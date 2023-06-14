@@ -1,10 +1,12 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { FaTwitter, FaHome, FaHashtag, FaBell, FaEnvelope, FaBookmark, FaList, FaUser, FaEllipsisH  } from "react-icons/fa";
 
 
-const NavigationSidebar = () => {
+const Navigation = () => {
     const { pathname } = useLocation();
+    const { currentUser } = useSelector((state) => state.user);
     const [ignore, tuiter, active] = pathname.split("/");
     const links = [{name: "", icon:<FaTwitter />},
                     {name: "home", icon:<FaHome />},     
@@ -19,7 +21,6 @@ const NavigationSidebar = () => {
    <div className="list-group">
       
      {links.map((link) => (
-        
         <Link
           key={link.name}
           to={`/tuiter/${link.name}`}
@@ -27,12 +28,16 @@ const NavigationSidebar = () => {
         >
           {link.icon}
           <span className="link-name d-none d-xl-inline d-xxl-inline p-2 ">{link.name}</span>
-        
         </Link>
+        
      ))}
+     {!currentUser && <Link className="list-group-item" to="/tuiter/login">   Login   </Link>}
+          {!currentUser && <Link className="list-group-item" to="/tuiter/register">Register</Link>}
+          { currentUser && <Link className="list-group-item" to="/tuiter/profile"> Profile </Link>}
      <br/>
+     
      <button className="form-control rounded-pill bg-primary text-white">Tuit</button>
    </div>
  );
 };
-export default NavigationSidebar;
+export default Navigation;
